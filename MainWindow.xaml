@@ -51,7 +51,8 @@
                                 <TextBox Text="{Binding Settings.Token}"></TextBox>
                             </DockPanel>
                         </DockPanel>
-                        <DataGrid ItemsSource="{Binding Settings.Channels}" ></DataGrid>
+                        <DataGrid ItemsSource="{Binding Settings.Channels}" >
+                        </DataGrid>
 
                     </DockPanel>
                 </TabItem>
