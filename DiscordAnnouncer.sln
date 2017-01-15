@@ -12,12 +12,15 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Export|Any CPU = Export|Any CPU
 		Release|Any CPU = Release|Any CPU
 		TestResponses|Any CPU = TestResponses|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{B962D555-CC71-4281-A659-36EB8ECA4BD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B962D555-CC71-4281-A659-36EB8ECA4BD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B962D555-CC71-4281-A659-36EB8ECA4BD0}.Export|Any CPU.ActiveCfg = Export|Any CPU
+		{B962D555-CC71-4281-A659-36EB8ECA4BD0}.Export|Any CPU.Build.0 = Export|Any CPU
 		{B962D555-CC71-4281-A659-36EB8ECA4BD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B962D555-CC71-4281-A659-36EB8ECA4BD0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B962D555-CC71-4281-A659-36EB8ECA4BD0}.TestResponses|Any CPU.ActiveCfg = Release|Any CPU
