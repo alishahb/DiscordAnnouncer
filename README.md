@@ -29,7 +29,7 @@ Release build: https://github.com/alishahb/DiscordAnnouncer/releases
 ### Preparing 
 1. Create Bot in Discord (https://discordapp.com/developers/applications/me)
 2. Copy Bot ClientId and Token
-3. Add Bot to your Server: https://discordapp.com/oauth2/authorize?client_id=XXX=bot&permissions=0 (replace XXX with your Bot ClientId)
+3. Add Bot to your Server: https://discordapp.com/oauth2/authorize?client_id=XXX&scope=bot&permissions=0 (replace XXX with your Bot ClientId)
 4. Download last release of DiscordAnnouncer or compile source
 5. Launch App
 
