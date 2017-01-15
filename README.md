@@ -2,10 +2,10 @@
 Application for easy maintaining Announcements posts to Discord
 
 ## Dependencies
-1. .Net 4.6.1
-2. 7-Zip.CommandLine version 9.20.0
-3. JetBrains.Annotations version 10.2.1
-4. Newtonsoft.Json version 9.0.1"
+* .Net 4.6.1 (https://www.microsoft.com/en-us/download/details.aspx?id=49981)
+* 7-Zip.CommandLine version 9.20.0 (https://www.nuget.org/packages/7-Zip.CommandLine/)
+* JetBrains.Annotations version 10.2.1 (https://www.nuget.org/packages/JetBrains.Annotations/)
+* Newtonsoft.Json version 9.0.1 (https://www.nuget.org/packages/Newtonsoft.Json/)
 
 ## How To Setup
 
