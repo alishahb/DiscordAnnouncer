@@ -43,3 +43,6 @@ If allows to create as many channels setups as you want for new beta \ release v
 3. **{PRODUCT_NAME}** will be replaced with **ProductName** Property for Channel Item
 4. **{VERSION}** will be repleaced with version number in Posting tab
 
+
+## Legal
+1. Icon used in Application "Dragon free icon" by Roundicons  (http://www.flaticon.com/free-icon/dragon_189021), Licence: http://file000.flaticon.com/downloads/license/license.pdf
