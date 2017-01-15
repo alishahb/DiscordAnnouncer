@@ -1,4 +1,6 @@
 
+[![Build status](https://ci.appveyor.com/api/projects/status/pcmd43hcum0dhr53?svg=true)](https://ci.appveyor.com/project/alishahb/discordannouncer)
+
 ![ICON](https://raw.githubusercontent.com/alishahb/DiscordAnnouncer/master/DiscordAnnouncer/Properties/Resources/icon-150.png)
 # DiscordAnnouncer ლ(ಠ益ಠლ) .
 Application for easy maintaining Announcements posts to Discord.
