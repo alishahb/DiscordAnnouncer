@@ -1,0 +1,50 @@
+pull_requests:
+  do_not_increment_build_number: true
+configuration: Export
+platform: Any CPU
+nuget:
+  project_feed: true
+before_build:
+- cmd: nuget restore
+- ps: >-
+      if ($env:APPVEYOR_REPO_TAG -eq "true")
+      {
+        Update-AppveyorBuild -Version "$env:APPVEYOR_REPO_TAG_NAME"
+      }
+      else
+      {
+        echo "Version correction"
+        $foundFiles = get-childitem C:\projects\*AssemblyInfo.cs -recurse  
+        echo "Files count:" $foundFiles.Count
+        foreach( $file in $foundFiles )  
+        {  
+          $globalAssemblyFile = $file.FullName
+          $globalAssemblyVersion = Get-Content $globalAssemblyFile
+          $hasAssemblyVersion = "'"+$globalAssemblyVersion+"'" -match 'AssemblyVersion\("([^\"]+)"\)'
+          if ($hasAssemblyVersion)
+          {
+              $global:version_number = "$($matches[1])"
+              echo $matches[1]
+              Update-AppveyorBuild -Version "$($matches[1])-dev-$($env:APPVEYOR_REPO_COMMIT.substring(0,7))"
+          }
+          else
+          {
+            Update-AppveyorBuild -Version "dev-$($env:APPVEYOR_REPO_COMMIT.substring(0,7))"
+          }
+          break
+        }
+      }
+      echo "build folder: $env:APPVEYOR_BUILD_FOLDER"
+build:
+  project: DiscordAnnouncer.sln
+  publish_nuget: true
+  publish_nuget_symbols: true
+  include_nuget_references: true
+  verbosity: minimal
+  publish_wap: true
+after_build:
+- cmd: 7z a DiscordAnnouncer-%APPVEYOR_BUILD_VERSION%.zip %APPVEYOR_BUILD_FOLDER%\DiscordAnnouncer\bin\Export\*
+- cmd: appveyor PushArtifact DiscordAnnouncer-%APPVEYOR_BUILD_VERSION%.zip %APPVEYOR_BUILD_FOLDER%\DiscordAnnouncer\bin\Export\* 
+artifacts:
+- path: DiscordAnnouncer-%APPVEYOR_BUILD_VERSION%.zip
+  name: DiscordAnnouncer v%APPVEYOR_BUILD_VERSION%
