@@ -159,9 +159,12 @@ namespace Alisha.DiscordAnnouncer
             });
         }
 
+        private static DateTime _delay = DateTime.MinValue;
         private static void Exit()
         {
-            if (MessageBox.Show("Fill out ChannelId (grab from log.txt) Settings.json before proceed") == MessageBoxResult.OK)
+            if (DateTime.Now - _delay < TimeSpan.FromMinutes(1)) return;
+
+            if (MessageBox.Show("Fill out ChannelId (grab from Server Data Tab) Settings.json before proceed") == MessageBoxResult.OK)
             {
                 // Environment.Exit(0);
             }
