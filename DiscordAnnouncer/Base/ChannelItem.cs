@@ -84,9 +84,33 @@ namespace Alisha.DiscordAnnouncer.Base
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        public bool Equals(ChannelItem other) => other?.ChannelId == ChannelId && Name == other?.Name;
-        public override bool Equals(object obj) => (obj is ChannelItem) && Equals((ChannelItem)obj);
-        public override int GetHashCode() => (int)ChannelId;
+        public bool Equals(ChannelItem other)
+        {
+            if (ReferenceEquals(null, other)) return false;
+            if (ReferenceEquals(this, other)) return true;
+            return string.Equals(_who, other._who) && string.Equals(_type, other._type) && string.Equals(_productName, other._productName) && string.Equals(_prefix, other._prefix) && _channelId == other._channelId;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj)) return false;
+            if (ReferenceEquals(this, obj)) return true;
+            if (obj.GetType() != this.GetType()) return false;
+            return Equals((ChannelItem)obj);
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                var hashCode = _who?.GetHashCode() ?? 0;
+                hashCode = (hashCode * 397) ^ (_type?.GetHashCode() ?? 0);
+                hashCode = (hashCode * 397) ^ (_productName?.GetHashCode() ?? 0);
+                hashCode = (hashCode * 397) ^ (_prefix?.GetHashCode() ?? 0);
+                hashCode = (hashCode * 397) ^ _channelId.GetHashCode();
+                return hashCode;
+            }
+        }
 
         #endregion EndOf-INotifyPropertyChanged
 
