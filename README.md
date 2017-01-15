@@ -10,6 +10,8 @@ It allows to create as many channels setups as you want for new beta \ release v
 But you can use it for other purpose as well :)
 
 
+![Message Preview](https://raw.githubusercontent.com/alishahb/DiscordAnnouncer/master/PICS/DiscordAnnouncer-Message-Preview.png)
+
 ![GUI Screenshot - Posting](https://raw.githubusercontent.com/alishahb/DiscordAnnouncer/master/PICS/DiscordAnnouncer-Posting.png)
 ##Dependencies
 * .Net 4.6.1 (https://www.microsoft.com/en-us/download/details.aspx?id=49981)
