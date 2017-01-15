@@ -3,7 +3,7 @@
 
 ![ICON](https://raw.githubusercontent.com/alishahb/DiscordAnnouncer/master/DiscordAnnouncer/Properties/Resources/icon-150.png)
 # DiscordAnnouncer ლ(ಠ益ಠლ) .
-Application for easy maintaining Announcements posts to Discord with pretty formating.
+Application for easy maintaining Announcements posts to Discord with pretty formatting.
 
 It allows to create as many channels setups as you want for new beta \ release versions of my products. 
 
