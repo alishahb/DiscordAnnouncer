@@ -16,6 +16,8 @@ But you can use it for other purpose as well :)
 * Newtonsoft.Json version 9.0.1 (https://www.nuget.org/packages/Newtonsoft.Json/)
 * Discord.Net" version 0.9.6 (https://www.nuget.org/packages/Discord.Net)
 
+## Download
+Release build: https://ci.appveyor.com/project/alishahb/discordannouncer/build/artifacts
 
 ##How To Setup
 
