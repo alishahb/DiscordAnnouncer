@@ -1,0 +1,68 @@
+﻿<Window x:Class="Alisha.DiscordAnnouncer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Alisha.DiscordAnnouncer"
+             DataContext="{Binding RelativeSource={RelativeSource Self}}"
+        mc:Ignorable="d"
+        Title="Alisha's Discord Announcer" Height="512" Width="889" WindowStartupLocation="CenterScreen" Icon="Properties/Resources/icon.ico">
+    <DockPanel>
+        <DockPanel Dock="Bottom" Margin="4,3">
+            <Button DockPanel.Dock="Left" Click="OnSaveClick" HorizontalAlignment="Right">Save Settings</Button>
+            <Button DockPanel.Dock="Right" x:Name="SendButton" IsEnabled="False" Click="SendMessage" HorizontalAlignment="Right" VerticalAlignment="Bottom">Send Announce</Button>
+        </DockPanel>
+        <DockPanel Dock="Bottom" ScrollViewer.CanContentScroll="True" Height="100">
+            <TextBox IsReadOnly="true" DockPanel.Dock="Top"  x:Name="ConsoleHandler" Background="Black" Foreground="White" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True"></TextBox>
+        </DockPanel>
+        <DockPanel DockPanel.Dock="Top">
+            <TabControl DockPanel.Dock="Top">
+
+                <TabItem Header="Posting">
+                    <DockPanel>
+                        <DockPanel DockPanel.Dock="Top">
+                            <DockPanel DockPanel.Dock="Right">
+                                <Label DockPanel.Dock="Left">Type:</Label>
+                                <ComboBox Width="300" x:Name="ChannelsCombobox" SelectionChanged="SelectedChannelChanged" ItemsSource="{Binding Settings.Channels}" DisplayMemberPath="Name" SelectedItem="{Binding Settings.SelectedChannelItem}" />
+                            </DockPanel>
+                            <DockPanel>
+                                <Label DockPanel.Dock="Left">Version:</Label>
+                                <TextBox DockPanel.Dock="Left" HorizontalAlignment="Stretch" x:Name="txtVersion"></TextBox>
+                            </DockPanel>
+                        </DockPanel>
+
+                        <DockPanel DockPanel.Dock="Top">
+                            <Label DockPanel.Dock="Left">Posting to channel:</Label>
+                            <TextBlock DockPanel.Dock="Left" HorizontalAlignment="Stretch" x:Name="txtInfo" VerticalAlignment="Center"></TextBlock>
+                        </DockPanel>
+                        <TextBox DockPanel.Dock="Top" TextWrapping="Wrap" AcceptsReturn="True" x:Name="txtMessage" Height="259"></TextBox>
+                    </DockPanel>
+
+                </TabItem>
+                <TabItem Header="Settings">
+                    <DockPanel>
+                        <DockPanel DockPanel.Dock="Bottom">
+                            <DockPanel  DockPanel.Dock="Top" Margin="1">
+                                <Label DockPanel.Dock="Left" Width="100">Server ID:</Label>
+                                <TextBox DockPanel.Dock="Left"  Text="{Binding Settings.ServerID}"></TextBox>
+                            </DockPanel>
+                            <DockPanel  DockPanel.Dock="Top" Margin="1">
+                                <Label Width="100">Token:</Label>
+                                <TextBox Text="{Binding Settings.Token}"></TextBox>
+                            </DockPanel>
+                        </DockPanel>
+                        <DataGrid ItemsSource="{Binding Settings.Channels}" ></DataGrid>
+
+                    </DockPanel>
+                </TabItem>
+                <TabItem Header="Server Data" ScrollViewer.CanContentScroll="True">
+                    <DockPanel Dock="Top" ScrollViewer.CanContentScroll="True">
+                        <TextBox IsReadOnly="true" DockPanel.Dock="Top"  x:Name="ServerDataHandler" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True"></TextBox>
+                    </DockPanel>
+                </TabItem>
+            </TabControl>
+        </DockPanel>
+
+
+    </DockPanel>
+</Window>
