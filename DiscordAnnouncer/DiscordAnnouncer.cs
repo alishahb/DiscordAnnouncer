@@ -21,12 +21,16 @@ namespace Alisha.DiscordAnnouncer
         public event Data OnServerDataRecieved;
         public event EventHandler OnReadySend;
 
+        public const string NAME = "Discord Announcer";
+
         public DiscordClient Client { get; private set; }
         public Server Server { get; private set; }
         public Discord.Channel Channel { get; private set; }
         public CommonSettings Settings { get; private set; }
         public string LogPath { get; private set; }
         public bool IsRunning { get; protected set; }
+
+        public Version Version => typeof(DiscordAnnouncer).Assembly.GetName().Version;
         public void SendMessage(string message)
         {
             Channel = Server.AllChannels.FirstOrDefault(c => c.Id == Settings.SelectedChannelItem?.ChannelId);
@@ -75,6 +79,9 @@ namespace Alisha.DiscordAnnouncer
             {
                 x.LogLevel = LogSeverity.Debug;
                 x.LogHandler = Log;
+                x.AppName = NAME;
+                x.AppUrl = "https://github.com/alishahb/DiscordAnnouncer";
+                x.AppVersion = Version.ToString();
             });
 
 
@@ -121,11 +128,12 @@ namespace Alisha.DiscordAnnouncer
 
         private void Ready(object sender, ServerEventArgs e)
         {
-
             Application.Current.Dispatcher.Invoke(() =>
             {
 
                 Log($"--- Joined Server <{e.Server.Name}>", LogType.Console);
+
+                Client.SetGame(NAME);
 
                 Log("---- SERVER INFO", LogType.ServerData);
                 Log($"[{e.Server.Id}] {e.Server.Name}", LogType.ServerData);

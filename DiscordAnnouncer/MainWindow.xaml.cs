@@ -37,7 +37,7 @@ namespace Alisha.DiscordAnnouncer
             Core.OnReadySend += OnReadySend;
             InitializeComponent();
 
-            Title += $" -- {typeof(DiscordAnnouncer).Assembly.GetName().Version}";
+            Title = $"Alisha's {DiscordAnnouncer.NAME} -- {Core.Version}";
             Loaded += OnLoaded;
             Application.Current.Exit += OnExit;
 
