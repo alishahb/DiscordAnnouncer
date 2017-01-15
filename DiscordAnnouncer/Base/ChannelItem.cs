@@ -40,7 +40,7 @@ namespace Alisha.DiscordAnnouncer.Base
         }
         #endregion EndOf-Type
 
-        
+
         #region ProductName
         protected string _productName;
         [DataMember]
@@ -84,7 +84,7 @@ namespace Alisha.DiscordAnnouncer.Base
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        public bool Equals(ChannelItem other) => other?.ChannelId == ChannelId;
+        public bool Equals(ChannelItem other) => other?.ChannelId == ChannelId && Name == other?.Name;
         public override bool Equals(object obj) => (obj is ChannelItem) && Equals((ChannelItem)obj);
         public override int GetHashCode() => (int)ChannelId;
 
