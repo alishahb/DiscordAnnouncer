@@ -1,11 +1,11 @@
 
 ![ICON](https://raw.githubusercontent.com/alishahb/DiscordAnnouncer/master/DiscordAnnouncer/Properties/Resources/icon-150.png)
-# DiscordAnnouncer
+# DiscordAnnouncer ლ(ಠ益ಠლ) .
 Application for easy maintaining Announcements posts to Discord.
 
 It allows to create as many channels setups as you want for new beta \ release versions of my products. 
 
-But you can use it for other purpose as well ლ(ಠ益ಠლ) .
+But you can use it for other purpose as well :)
 
 
 ![GUI Screenshot - Posting](https://raw.githubusercontent.com/alishahb/DiscordAnnouncer/master/PICS/DiscordAnnouncer-Posting.png)
