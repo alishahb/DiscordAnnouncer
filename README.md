@@ -2,7 +2,8 @@
 ![ICON](https://raw.githubusercontent.com/alishahb/DiscordAnnouncer/master/DiscordAnnouncer/Properties/Resources/icon-150.png)
 # DiscordAnnouncer
 Application for easy maintaining Announcements posts to Discord.
-If allows to create as many channels setups as you want for new beta \ release versions of my products. But you can use it for other types announcements as well :)
+
+It allows to create as many channels setups as you want for new beta \ release versions of my products. But you can use it for other types announcements as well :)
 
 
 ![GUI Screenshot - Posting](https://raw.githubusercontent.com/alishahb/DiscordAnnouncer/master/PICS/DiscordAnnouncer-Posting.png)
