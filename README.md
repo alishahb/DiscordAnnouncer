@@ -4,7 +4,7 @@
 Application for easy maintaining Announcements posts to Discord.
 
 It allows to create as many channels setups as you want for new beta \ release versions of my products. 
-But you can use it for other types announcements as well :)
+But you can use it for other purpose as well :)
 
 
 ![GUI Screenshot - Posting](https://raw.githubusercontent.com/alishahb/DiscordAnnouncer/master/PICS/DiscordAnnouncer-Posting.png)
