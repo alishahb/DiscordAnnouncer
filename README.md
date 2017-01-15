@@ -1,6 +1,11 @@
 # DiscordAnnouncer
 Application for easy maintaining Announcements posts to Discord
 
+## Dependencies
+1. .Net 4.6.1
+2. 7-Zip.CommandLine version 9.20.0
+3. JetBrains.Annotations version 10.2.1
+4. Newtonsoft.Json version 9.0.1"
 
 ## How To Setup
 
