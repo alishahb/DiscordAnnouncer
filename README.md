@@ -19,7 +19,8 @@ But you can use it for other purpose as well :)
 * Discord.Net" version 0.9.6 (https://www.nuget.org/packages/Discord.Net)
 
 ## Download
-Release build: https://ci.appveyor.com/project/alishahb/discordannouncer/build/artifacts
+Last build: https://ci.appveyor.com/project/alishahb/discordannouncer/build/artifacts
+Release build: https://github.com/alishahb/DiscordAnnouncer/releases
 
 ##How To Setup
 
