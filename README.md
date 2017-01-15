@@ -11,6 +11,8 @@ If allows to create as many channels setups as you want for new beta \ release v
 * 7-Zip.CommandLine version 9.20.0 (https://www.nuget.org/packages/7-Zip.CommandLine/)
 * JetBrains.Annotations version 10.2.1 (https://www.nuget.org/packages/JetBrains.Annotations/)
 * Newtonsoft.Json version 9.0.1 (https://www.nuget.org/packages/Newtonsoft.Json/)
+* Discord.Net" version 0.9.6 (https://www.nuget.org/packages/Discord.Net)
+
 
 ##How To Setup
 
