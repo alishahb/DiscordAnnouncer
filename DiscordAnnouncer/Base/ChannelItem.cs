@@ -41,6 +41,8 @@ namespace Alisha.DiscordAnnouncer.Base
         #endregion EndOf-Type
 
 
+
+
         #region ProductName
         protected string _productName;
         [DataMember]
@@ -73,7 +75,19 @@ namespace Alisha.DiscordAnnouncer.Base
         }
         #endregion EndOf-ChannelId
 
-        public string Name => $"{ProductName} [{Type}]";
+        public string Name => $"{ProductName} [{Type}] ({ToolTip})";
+
+        #region ToolTip
+        protected string _toolTip;
+        [DataMember]
+        public string ToolTip
+        {
+            get { return _toolTip; }
+            set { _toolTip = value; OnPropertyChanged(); }
+        }
+        #endregion EndOf-ToolTip
+
+
 
         #region INotifyPropertyChanged
         public event PropertyChangedEventHandler PropertyChanged;

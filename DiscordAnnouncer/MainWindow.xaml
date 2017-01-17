@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Alisha.DiscordAnnouncer"
              DataContext="{Binding RelativeSource={RelativeSource Self}}"
         mc:Ignorable="d"
-        Title="Alisha's Discord Announcer" Height="512" Width="889" WindowStartupLocation="CenterScreen" Icon="Properties/Resources/icon.ico">
+        Title="Alisha's Discord Announcer" Height="522" Width="1129" WindowStartupLocation="CenterScreen" Icon="Properties/Resources/icon.ico">
     <DockPanel>
         <DockPanel Dock="Bottom" Margin="4,3">
             <Button DockPanel.Dock="Left" Click="OnSaveClick" HorizontalAlignment="Right">Save Settings</Button>

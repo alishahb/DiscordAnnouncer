@@ -46,6 +46,7 @@ But you can use it for other purpose as well :)
 4. **ChannelId** - To which channel message be posted
 5. **Prefix**- line formating to be used to make prefix of message
 6. **Name** - use for display in Posting tab, not editable
+7. **ToolTip** - used for display in Posting tab, have no affect on posting message
 
 ![GUI Screenshot - ServerData](https://raw.githubusercontent.com/alishahb/DiscordAnnouncer/master/PICS/DiscordAnnouncer-ServerData.png)
 

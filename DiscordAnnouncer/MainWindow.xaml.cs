@@ -151,7 +151,7 @@ namespace Alisha.DiscordAnnouncer
                 Settings.SelectedChannelItem = channelItem;
                 if (channelData == null) return;
 
-                txtInfo.Text = $"[{channelData.Id}] #{channelData.Name}";
+                txtInfo.Text = $"[{channelData.Id}] #{channelData.Name} ({channelItem.ToolTip})";
             }
 
             Save();
